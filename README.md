@@ -16,11 +16,12 @@ cat /var/log/cups/error_log
 sudo cat /etc/cups/cupsd.conf
 systemctl restart cups
 
+
+```
 LogLevel warn
 PageLogFormat
 MaxLogSize 0
 ErrorPolicy retry-job
-# Allow remote access
 Port *:631
 Listen /run/cups/cups.sock
 Browsing Yes
@@ -28,9 +29,7 @@ BrowseLocalProtocols dnssd
 DefaultAuthType Basic
 WebInterface Yes
 IdleExitTimeout 60
-# SSL/TLS configuration
 <Location />
-  # Allow remote access...
   Order allow,deny
   Allow all
 </Location>
@@ -145,3 +144,4 @@ IdleExitTimeout 60
     Order deny,allow
   </Limit>
 </Policy>
+```
