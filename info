@@ -6,6 +6,7 @@ sudo gunzip linux-brprinter-installer-2.2.4-1.gz
 sudo bash linux-brprinter-installer-2.2.4-1
 sudo apt-get install printer-driver-all
 
+Driver:	Brother HL-1110 series, using brlaser v6 (grayscale)
 
 
 
